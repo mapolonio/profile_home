@@ -1,32 +1,37 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Welcome msg="Welcome to mapolonio.dev" />
+    <UnderConstruction msg="This page is under construction" />
+    <Footer msg="Copyright © 2020 Matías Apolonio. All rights reserved." />
   </div>
 </template>
+
+<script>
+import Footer from '@/components/Footer';
+import UnderConstruction from '@/components/UnderConstruction';
+import Welcome from '@/components/Welcome';
+
+export default {
+  name: 'App',
+  components: { Footer, UnderConstruction, Welcome }
+};
+</script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  background-image: url('./assets/space_219.gif');
 }
 </style>
