@@ -33,5 +33,6 @@ export default {
 
 body {
   background-image: url('./assets/images/space_219.gif');
+  margin: 0px;
 }
 </style>
