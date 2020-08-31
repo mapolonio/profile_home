@@ -3,8 +3,7 @@ node_modules
 /dist
 
 # local env files
-.env.local
-.env.*.local
+.env
 
 # Log files
 npm-debug.log*
@@ -23,3 +22,6 @@ pnpm-debug.log*
 
 # netlify
 .netlify
+
+# Build server functions
+/lambda
