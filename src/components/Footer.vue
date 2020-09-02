@@ -1,32 +1,23 @@
 <template>
-  <div id="copyright">
-    <span>
-      {{ msg }}
-    </span>
+  <div id="footer">
+    <VisitorCounter />
   </div>
 </template>
 
 <script>
+import VisitorCounter from '@/components/VisitorCounter';
+
 export default {
   name: 'Footer',
-  props: {
-    msg: String
-  }
+  components: { VisitorCounter }
 };
 </script>
 
 <style scoped>
-#copyright {
-  color: white;
-  margin-bottom: 10px;
-  min-height: 33vh;
+#footer {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-}
-
-#copyright > span {
-  margin-bottom: 10px;
-  text-align: center;
+  min-height: 33vh;
 }
 </style>
