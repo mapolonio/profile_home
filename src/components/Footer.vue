@@ -18,6 +18,6 @@ export default {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  min-height: 33vh;
+  min-height: 30vh;
 }
 </style>

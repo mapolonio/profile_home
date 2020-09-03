@@ -27,7 +27,7 @@ export default {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   overflow: hidden;
 }
 

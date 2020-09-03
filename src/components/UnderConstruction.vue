@@ -30,7 +30,7 @@ export default {
 <style scoped>
 #under-construction {
   color: white;
-  min-height: 33vh;
+  min-height: 30vh;
   width: 75%;
   display: flex;
   flex-flow: column;

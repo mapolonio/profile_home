@@ -1,6 +1,6 @@
 <template>
   <div id="welcome">
-    <h1 class="font-effect-fire-animation">{{ msg }}</h1>
+    <h1 class="font-effect-fire">{{ msg }}</h1>
   </div>
 </template>
 
@@ -14,13 +14,13 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Roboto&effect=fire-animation');
+@import url('https://fonts.googleapis.com/css?family=Roboto&effect=fire');
 
 #welcome {
   color: white;
-  font-size: 2em;
+  font-size: 1.4em;
   font-family: 'Roboto', sans-serif;
-  min-height: 33vh;
+  min-height: 30vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
