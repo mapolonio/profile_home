@@ -12,6 +12,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
+    "encoding": "^0.1.13",
     "graphql": "^15.3.0",
     "graphql-request": "^3.0.0",
     "v-odometer": "^2.0.1",
