@@ -2,7 +2,7 @@
   <div id="app">
     <Welcome msg="Welcome to mapolonio.dev" />
     <UnderConstruction msg="This page is under construction" />
-    <Footer msg="Copyright © 2020 Matías Apolonio. All rights reserved." />
+    <Footer />
   </div>
 </template>
 
