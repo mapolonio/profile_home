@@ -32,7 +32,8 @@ export default {
 }
 
 body {
-  background-image: url('./assets/images/space_219.gif');
+  background-image: url('./assets/images/bg.gif');
   margin: 0px;
+  cursor: url('./assets/cursor/cursor.cur'), auto;
 }
 </style>
