@@ -2,8 +2,3 @@
   command = "npm run build"
   functions = "lambda"
   publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/not-found"
-  status = 404
