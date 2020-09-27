@@ -13,7 +13,7 @@ const routes = [
     component: UnderConstruction
   },
   {
-    path: '*',
+    path: '/not-found',
     name: 'not-found',
     component: NotFound
   }
