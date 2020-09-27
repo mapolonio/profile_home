@@ -1,12 +1,12 @@
 <template>
-  <div id="welcome">
+  <div class="fire-title">
     <h1 class="font-effect-fire">{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Welcome',
+  name: 'FireTitle',
   props: {
     msg: String
   }
@@ -16,7 +16,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto&effect=fire');
 
-#welcome {
+.fire-title {
   color: white;
   font-size: 1.4em;
   font-family: 'Roboto', sans-serif;
@@ -26,7 +26,7 @@ export default {
   justify-content: center;
 }
 
-#welcome > h1 {
+.fire-title > h1 {
   text-align: center;
 }
 </style>

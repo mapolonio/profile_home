@@ -1,6 +1,6 @@
 <template>
   <div id="not-found-container">
-    <Welcome msg="404" />
+    <FireTitle msg="404" />
     <WarningMessage
       msg="Sorry, we couldn't find the page you were looking for..."
     />
@@ -11,13 +11,13 @@
 </template>
 
 <script>
+import FireTitle from '@/components/FireTitle';
 import NavButton from '@/components/NavButton';
 import WarningMessage from '@/components/WarningMessage';
-import Welcome from '@/components/Welcome';
 
 export default {
   name: 'UnderConstruction',
-  components: { NavButton, WarningMessage, Welcome }
+  components: { NavButton, WarningMessage, FireTitle }
 };
 </script>
 

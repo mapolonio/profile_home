@@ -1,17 +1,17 @@
 <template>
   <div id="under-construction">
-    <Welcome msg="Welcome to mapolonio.dev" />
+    <FireTitle msg="Welcome to mapolonio.dev" />
     <WarningMessage msg="This page is under construction" />
   </div>
 </template>
 
 <script>
 import WarningMessage from '@/components/WarningMessage';
-import Welcome from '@/components/Welcome';
+import FireTitle from '@/components/FireTitle';
 
 export default {
   name: 'UnderConstruction',
-  components: { WarningMessage, Welcome }
+  components: { WarningMessage, FireTitle }
 };
 </script>
 
