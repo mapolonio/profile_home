@@ -9,11 +9,8 @@ exports.handler = async (event, context, callback) => {
   let result;
 
   try {
-    const graphQLClient = init();
-
-    // console.log('event', event);
-
     let count = 0;
+    const graphQLClient = init();
     const { totalVisits = {} } = await graphQLClient.request(getTotalVisits);
     const { _id, total } = totalVisits;
 
