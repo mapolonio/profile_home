@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <Welcome msg="Welcome to mapolonio.dev" />
-    <UnderConstruction msg="This page is under construction" />
+    <router-view></router-view>
     <Footer />
   </div>
 </template>
 
 <script>
 import Footer from '@/components/Footer';
-import UnderConstruction from '@/components/UnderConstruction';
-import Welcome from '@/components/Welcome';
 
 export default {
   name: 'App',
-  components: { Footer, UnderConstruction, Welcome }
+  components: { Footer }
 };
 </script>
 

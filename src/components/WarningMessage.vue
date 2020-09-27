@@ -1,7 +1,7 @@
 <template>
-  <div id="under-construction">
+  <div id="warning-message">
     <hr />
-    <div id="construction-msg">
+    <div id="msg-container">
       <ImageContainer :image="constructionGif" />
       <h1>{{ msg }}</h1>
       <ImageContainer :image="constructionGif" />
@@ -14,7 +14,7 @@
 import ImageContainer from '@/components/ImageContainer';
 
 export default {
-  name: 'UnderConstruction',
+  name: 'WarningMessage',
   components: { ImageContainer },
   props: {
     msg: String
@@ -28,16 +28,7 @@ export default {
 </script>
 
 <style scoped>
-#under-construction {
-  color: white;
-  min-height: 30vh;
-  width: 75%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-
-#under-construction >>> h1 {
+#warning-message >>> h1 {
   text-align: center;
   animation-duration: 800ms;
   animation-name: blink;
@@ -54,7 +45,7 @@ export default {
   }
 }
 
-#under-construction > hr {
+#warning-message > hr {
   height: 20px;
   width: 100%;
   background-image: repeating-linear-gradient(
@@ -67,7 +58,7 @@ export default {
   border: none;
 }
 
-#construction-msg {
+#msg-container {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
