@@ -1,27 +1,25 @@
 <template>
   <div id="visitor-counter">
     <span id="visitor-msg">you are visitor number</span>
-    <vue-odometer :value="visitNumber" theme="digital"></vue-odometer>
+    <vue-odometer :value="visits" theme="digital"></vue-odometer>
   </div>
 </template>
 
 <script>
 import VueOdometer from 'v-odometer/src';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'VisitorCounter',
   components: { 'vue-odometer': VueOdometer },
-  data() {
-    return {
-      visitNumber: 0
-    };
-  },
   created() {
-    return fetch('/.netlify/functions/getAndIncrementVisits')
-      .then(res => res.json())
-      .then(({ visits }) => {
-        this.visitNumber = visits;
-      });
+    return this.getVisitNumber();
+  },
+  methods: {
+    ...mapActions(['getVisitNumber'])
+  },
+  computed: {
+    ...mapState(['visits'])
   }
 };
 </script>
