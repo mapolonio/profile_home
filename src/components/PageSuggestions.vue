@@ -43,7 +43,9 @@ export default {
 
 <style scoped>
 .page-suggestions {
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .page-suggestions > h2 {
