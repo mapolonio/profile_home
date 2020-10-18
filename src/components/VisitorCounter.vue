@@ -25,11 +25,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: iPixelU;
-  src: url('../assets/fonts/I-pixel-u.ttf');
-}
-
 #visitor-counter {
   display: flex;
   flex-flow: column;
