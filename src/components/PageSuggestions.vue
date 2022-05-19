@@ -34,6 +34,11 @@ export default {
           icon: 'github.svg',
           url: 'https://github.com/mapolonio',
           text: 'Github profile'
+        },
+        {
+          icon: 'palabr.svg',
+          url: 'https://palabr.mapolonio.dev',
+          text: 'Palabr: Wordl en español!'
         }
       ]
     };

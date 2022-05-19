@@ -51,6 +51,6 @@ export default {
 }
 
 .page-suggestion-item >>> img {
-  height: 80px;
+  height: 60px;
 }
 </style>
