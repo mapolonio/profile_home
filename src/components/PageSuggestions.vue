@@ -27,7 +27,7 @@ export default {
       pages: [
         {
           icon: 'linkedin.svg',
-          url: 'https://www.linkedin.com/in/mat%C3%ADas-apolonio-9015a39a',
+          url: 'https://www.linkedin.com/in/mapoloniolorenzo',
           text: 'Linkedin profile'
         },
         {
