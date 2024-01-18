@@ -4,14 +4,14 @@ import MainFooter from './components/MainFooter.vue';
 </script>
 
 <template>
-  <div id="app">
+  <div id="main-container">
     <RouterView />
     <MainFooter />
   </div>
 </template>
 
 <style>
-#app {
+#main-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
