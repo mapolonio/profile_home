@@ -1,31 +1,22 @@
+<script setup lang="ts">
+import ImageContainer from './ImageContainer.vue'
+
+defineProps<{
+  msg: string
+}>()
+</script>
+
 <template>
   <div id="warning-message">
     <hr />
     <div id="msg-container">
-      <ImageContainer :image="constructionGif" />
+      <ImageContainer image="constructionGif" />
       <h1>{{ msg }}</h1>
-      <ImageContainer :image="constructionGif" />
+      <ImageContainer image="constructionGif" />
     </div>
     <hr />
   </div>
 </template>
-
-<script>
-import ImageContainer from '@/components/ImageContainer';
-
-export default {
-  name: 'WarningMessage',
-  components: { ImageContainer },
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      constructionGif: 'men_at_work_spin.gif'
-    };
-  }
-};
-</script>
 
 <style scoped>
 #warning-message >>> h1 {

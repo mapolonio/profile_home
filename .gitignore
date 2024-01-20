@@ -1,27 +1,36 @@
 .DS_Store
 node_modules
-/dist
+dist
+dist-ssr
+coverage
 
 # local env files
 .env
+*.local
 
 # Log files
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
+
+/cypress/videos/
+/cypress/screenshots/
 
 # Editor directories and files
 .idea
-.vscode
+.vscode/*
+!.vscode/extensions.json
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# netlify
-.netlify
+*.tsbuildinfo
 
-# Build server functions
-/lambda
+# Local Netlify folder
+.netlify

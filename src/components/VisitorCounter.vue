@@ -1,30 +1,27 @@
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useVisitsStore } from '../store/visits'
+
+const store = useVisitsStore()
+const { visits } = storeToRefs(store)
+const { getAndUpdateVisits } = store
+
+onMounted(() => {
+  getAndUpdateVisits()
+})
+</script>
+
 <template>
   <div id="visitor-counter">
     <span id="visitor-msg">you are visitor number</span>
-    <vue-odometer :value="visits" theme="digital"></vue-odometer>
+    <span id="odometer">{{ visits }}</span>
   </div>
 </template>
 
-<script>
-import VueOdometer from 'v-odometer/src';
-import { mapActions, mapState } from 'vuex';
-
-export default {
-  name: 'VisitorCounter',
-  components: { 'vue-odometer': VueOdometer },
-  created() {
-    return this.getVisitNumber();
-  },
-  methods: {
-    ...mapActions(['getVisitNumber'])
-  },
-  computed: {
-    ...mapState(['visits'])
-  }
-};
-</script>
-
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Wallpoet');
+
 #visitor-counter {
   display: flex;
   flex-flow: column;
@@ -41,11 +38,16 @@ export default {
   margin-bottom: 5px;
 }
 
-.odometer {
+#odometer {
+  font-family: 'Wallpoet', monospace;
   font-size: 1.5em;
   border: 10px solid;
   border-image-slice: 1;
   border-width: 6px;
   border-image-source: linear-gradient(to left, #9e9e9e, #b5b5b5);
+  color: rgb(139, 245, 165);
+  padding: 2px 5px;
+  background-color: rgb(0, 0, 0);
+  background-image: radial-gradient(rgba(139, 245, 165, 0.4), #000);
 }
 </style>

@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import FireTitle from '../components/FireTitle.vue'
+import PageSuggestions from '../components/PageSuggestions.vue'
+import WarningMessage from '../components/WarningMessage.vue'
+</script>
+
 <template>
   <div id="under-construction">
     <FireTitle msg="Welcome to mapolonio.dev" />
@@ -5,17 +11,6 @@
     <PageSuggestions />
   </div>
 </template>
-
-<script>
-import FireTitle from '@/components/FireTitle';
-import PageSuggestions from '@/components/PageSuggestions';
-import WarningMessage from '@/components/WarningMessage';
-
-export default {
-  name: 'UnderConstruction',
-  components: { FireTitle, PageSuggestions, WarningMessage }
-};
-</script>
 
 <style scoped>
 @font-face {

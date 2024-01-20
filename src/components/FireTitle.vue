@@ -1,17 +1,14 @@
+<script setup lang="ts">
+defineProps<{
+  msg: string
+}>()
+</script>
+
 <template>
   <div class="fire-title">
     <h1 class="font-effect-fire">{{ msg }}</h1>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'FireTitle',
-  props: {
-    msg: String
-  }
-};
-</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto&effect=fire');

@@ -1,9 +1,28 @@
+<script setup lang="ts">
+import PageSuggestion from './PageSuggestion.vue'
+
+const pages = [
+  {
+    icon: 'linkedin.svg',
+    url: 'https://www.linkedin.com/in/mapoloniolorenzo',
+    text: 'Linkedin profile'
+  },
+  {
+    icon: 'github.svg',
+    url: 'https://github.com/mapolonio',
+    text: 'Github profile'
+  },
+  {
+    icon: 'palabr.svg',
+    url: 'https://palabr.mapolonio.dev',
+    text: 'Palabr: Wordl en español!'
+  }
+]
+</script>
+
 <template>
   <div class="page-suggestions">
-    <h2>
-      In the meantime you can visit these other pages that may be of your
-      interest:
-    </h2>
+    <h2>In the meantime you can visit these other pages that may be of your interest:</h2>
     <div class="page-suggestions-list">
       <PageSuggestion
         v-for="(page, index) in pages"
@@ -15,36 +34,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import PageSuggestion from '@/components/PageSuggestion';
-
-export default {
-  name: 'PageSuggestions',
-  components: { PageSuggestion },
-  data() {
-    return {
-      pages: [
-        {
-          icon: 'linkedin.svg',
-          url: 'https://www.linkedin.com/in/mapoloniolorenzo',
-          text: 'Linkedin profile'
-        },
-        {
-          icon: 'github.svg',
-          url: 'https://github.com/mapolonio',
-          text: 'Github profile'
-        },
-        {
-          icon: 'palabr.svg',
-          url: 'https://palabr.mapolonio.dev',
-          text: 'Palabr: Wordl en español!'
-        }
-      ]
-    };
-  }
-};
-</script>
 
 <style scoped>
 .page-suggestions {

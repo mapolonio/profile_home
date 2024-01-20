@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import VisitorCounter from './VisitorCounter.vue';
+import VisitorCounter from './VisitorCounter.vue'
 </script>
 
 <style scoped>
