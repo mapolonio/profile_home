@@ -25,7 +25,7 @@ import MainFooter from './components/MainFooter.vue'
 }
 
 body {
-  background-image: url('./images/bg.gif');
+  background-image: url(/images/bg.gif);
   margin: 0px;
   cursor: url('./assets/cursor/cursor.cur'), auto;
 }
