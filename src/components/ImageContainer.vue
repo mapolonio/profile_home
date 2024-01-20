@@ -12,5 +12,5 @@ const images: Record<string, string> = {
 </script>
 
 <template>
-  <img :src="`/src/assets/images/${images[image]}`" :alt="image" />
+  <img :src="`/images/${images[image]}`" :alt="image" />
 </template>
