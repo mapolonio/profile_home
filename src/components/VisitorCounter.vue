@@ -1,21 +1,48 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref, watch, onBeforeUnmount } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useVisitsStore } from '../store/visits'
 
 const store = useVisitsStore()
-const { visits } = storeToRefs(store)
+const visitsNumber = ref<string | number>('0000')
+const { visits, status } = storeToRefs(store)
 const { updateVisitsCount } = store
+const randomNumber = (): string => {
+  return (Math.random() * 9999).toFixed(0).toString().padStart(4, '0')
+}
+const timer = setInterval(() => {
+  if (status.value === 'loading') {
+    visitsNumber.value = randomNumber()
+  }
+}, 100)
+
+watch(status, (newStatus) => {
+  if (['ready', 'error'].includes(newStatus)) {
+    clearInterval(timer)
+  }
+
+  if (newStatus === 'ready') {
+    visitsNumber.value = visits.value
+  }
+
+  if (newStatus === 'error') {
+    visitsNumber.value = 'ERROR'
+  }
+})
 
 onMounted(() => {
   updateVisitsCount()
+})
+
+onBeforeUnmount(() => {
+  clearInterval(timer)
 })
 </script>
 
 <template>
   <div id="visitor-counter">
     <span id="visitor-msg">you are visitor number</span>
-    <span id="odometer">{{ visits }}</span>
+    <span id="odometer">{{ visitsNumber }}</span>
   </div>
 </template>
 

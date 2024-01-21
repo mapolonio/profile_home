@@ -13,25 +13,24 @@ const fetchAndIncreaseVisits = async (): Promise<number> => {
   return visitNumber
 }
 
+export type Status = 'loading' | 'error' | 'ready'
+
 export const useVisitsStore = defineStore('visits', () => {
   const visits = ref<number>(0)
-  const isLoading = ref(false)
-  const hasError = ref(false)
+  const status = ref<Status>('loading')
 
   const updateVisitsCount = async () => {
-    isLoading.value = true
+    status.value = 'loading'
 
     fetchAndIncreaseVisits()
       .then((loadedVisits) => {
         visits.value = loadedVisits
+        status.value = 'ready'
       })
       .catch(() => {
-        hasError.value = true
-      })
-      .finally(() => {
-        isLoading.value = false
+        status.value = 'error'
       })
   }
 
-  return { visits, isLoading, hasError, updateVisitsCount }
+  return { visits, status, updateVisitsCount }
 })
