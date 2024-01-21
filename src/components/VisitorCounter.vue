@@ -5,10 +5,10 @@ import { useVisitsStore } from '../store/visits'
 
 const store = useVisitsStore()
 const { visits } = storeToRefs(store)
-const { getAndUpdateVisits } = store
+const { updateVisitsCount } = store
 
 onMounted(() => {
-  getAndUpdateVisits()
+  updateVisitsCount()
 })
 </script>
 
