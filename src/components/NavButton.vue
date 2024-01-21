@@ -1,23 +1,20 @@
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    navigateTo: string
+    text: string
+  }>(),
+  {
+    navigateTo: '/'
+  }
+)
+</script>
+
 <template>
   <div class="nav-button">
     <router-link :to="{ name: navigateTo }">{{ text }}</router-link>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'NavButton',
-  props: {
-    navigateTo: {
-      type: String,
-      default: '/'
-    },
-    text: {
-      type: String
-    }
-  }
-};
-</script>
 
 <style scoped>
 @font-face {

@@ -1,7 +1,0 @@
-type VisitCount {
-  total: Long!
-}
-
-type Query {
-  totalVisits: VisitCount
-}

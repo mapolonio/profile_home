@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import ImageContainer from './ImageContainer.vue'
+
+withDefaults(
+  defineProps<{
+    url: string
+    icon: string
+    text: string
+  }>(),
+  {
+    url: '#',
+    icon: '',
+    text: ''
+  }
+)
+</script>
+
 <template>
   <div class="page-suggestion-item">
     <a class="page-suggestion-link" :href="url">
@@ -6,29 +23,6 @@
     </a>
   </div>
 </template>
-
-<script>
-import ImageContainer from '@/components/ImageContainer';
-
-export default {
-  name: 'PageSuggestion',
-  components: { ImageContainer },
-  props: {
-    url: {
-      type: String,
-      default: '#'
-    },
-    icon: {
-      type: String,
-      default: ''
-    },
-    text: {
-      type: String,
-      default: ''
-    }
-  }
-};
-</script>
 
 <style scoped>
 .page-suggestion-item {

@@ -4,13 +4,8 @@
   </div>
 </template>
 
-<script>
-import VisitorCounter from '@/components/VisitorCounter';
-
-export default {
-  name: 'Footer',
-  components: { VisitorCounter }
-};
+<script setup lang="ts">
+import VisitorCounter from './VisitorCounter.vue'
 </script>
 
 <style scoped>
